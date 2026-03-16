@@ -22,6 +22,9 @@ public class TestComplexBeanScopes {
 
 		System.out.println("Engine ref equality : "+(car.getEngine() == car1.getEngine()));
 		
+		System.out.println(car);
+		System.out.println(car1);
+		
 		
 		System.out.println("main method ended!!");
 

@@ -43,18 +43,16 @@ public abstract class Car {
 //		return engine;
 //	}
 //
-//	public void setEngine(Engine engine) {
-//		this.engine = engine;
-//	}
+	public void setEngine(Engine engine) {
+		this.engine = engine;
+	}
 
     // abstract lookup method
     public abstract Engine getEngine();
 
-	
-	
 	@Override
 	public String toString() {
-		return "Car [carId=" + carId + ", companyName=" + companyName + ", model=" + model + ", engine=" + engine + "]";
+		return "Car [carId=" + carId + ", companyName=" + companyName + ", model=" + model + ", engine=" +  getEngine() + "]";
 	}
 	
 }
