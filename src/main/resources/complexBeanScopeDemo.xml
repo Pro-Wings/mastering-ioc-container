@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="eng" class="com.prowings.springcore.complexbeanscope.Engine" scope="prototype">
+		<property name="engineId" value="1234" />
+		<property name="name" value="v12-engine" />
+		<property name="cc" value="3000" />
+	</bean>
+
+	<bean id="car" class="com.prowings.springcore.complexbeanscope.Car" >
+		<property name="carId" value="1111" />
+		<property name="companyName" value="Audi" />
+		<property name="model" value="A4" />
+		
+		<!-- Lookup Method Injection -->
+		<lookup-method name="getEngine" bean="eng"/>
+	</bean>
+
+
+</beans>

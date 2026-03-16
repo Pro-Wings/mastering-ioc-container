@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dept1" name="department1" class="com.prowings.springcore.Department">
+		<constructor-arg value="111"/>
+		<constructor-arg value="Accounts"/>
+	</bean>
+
+	<bean id="dept2" name="department2" class="com.prowings.springcore.Department" primary="true">
+		<constructor-arg value="222"/>
+		<constructor-arg value="Tax"/>
+	</bean>
+
+	<bean id="emp" name="employee1" class="com.prowings.springcore.Employee" autowire="constructor">
+		<constructor-arg index="1" value="Ram" />
+		<constructor-arg name="empId" value="10" />
+		<!-- <constructor-arg index="2" ref="department" /> -->
+	</bean>
+
+</beans>

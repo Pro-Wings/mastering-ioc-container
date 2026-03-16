@@ -1,10 +1,13 @@
 package com.prowings.springcore;
 
+import java.util.List;
+
 public class Student {
 	
 	private int roll;
 	private String name;
 	private Address address;
+	private List<String> subjects;
 	
 	public Student() {
 		super();
@@ -39,10 +42,19 @@ public class Student {
 		this.address = address;
 	}
 
+	public List<String> getSubjects() {
+		return subjects;
+	}
+
+	public void setSubjects(List<String> subjects) {
+		this.subjects = subjects;
+	}
+
 	@Override
 	public String toString() {
-		return "Student [roll=" + roll + ", name=" + name + ", address=" + address + "]";
+		return "Student [roll=" + roll + ", name=" + name + ", address=" + address + ", subjects=" + subjects + "]";
 	}
+
 
 
 }
