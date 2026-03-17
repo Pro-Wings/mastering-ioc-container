@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dept" name="department" class="com.prowings.springcore.circulardependency.Department" lazy-init="true">
+		<constructor-arg value="222"/>
+		<constructor-arg value="Tax"/>
+	    <constructor-arg index="2" ref="emp" /> 
+	</bean>
+
+	<bean id="emp" name="employee1" class="com.prowings.springcore.circulardependency.Employee">
+		<constructor-arg index="1" value="Ram" />
+		<constructor-arg name="empId" value="10" />
+	    <constructor-arg index="2" ref="department" /> 
+	</bean>
+
+
+</beans>
