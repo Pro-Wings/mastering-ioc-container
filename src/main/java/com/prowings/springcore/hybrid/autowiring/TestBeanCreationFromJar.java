@@ -1,11 +1,12 @@
-package com.prowings.springcore.hybrid;
+package com.prowings.springcore.hybrid.autowiring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.abc.emp.Employee;
 import com.prowings.springcore.complexbeanscope.Car;
 
-public class TestHybridConfigOfSpringContainer {
+public class TestBeanCreationFromJar {
 	
 	public static void main(String[] args) {
 		
@@ -13,13 +14,11 @@ public class TestHybridConfigOfSpringContainer {
 		
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("hybridSpringContext.xml");
 		
-		Student std1 = ctx.getBean("std2",Student.class);
-		Student std2 = ctx.getBean("std2",Student.class);
+//		Employee e = ctx.getBean(Employee.class);
+
+		Employee e1 = ctx.getBean("emp",Employee.class);
 		
-		System.out.println(std1);
-		System.out.println(std2);
-		
-		System.out.println(std1 == std2);
+		System.out.println(e1);
 		
 		ctx.close();
 		

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class StudentBeans {
 	
-	@Bean(name = "std1")
+	@Bean(name = "std1"/* , autowireCandidate = false */)
 	public Student getStudent1()
 	{
 		Student std = new Student();
