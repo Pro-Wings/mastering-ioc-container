@@ -11,9 +11,9 @@ public class TestZeroXmlConfig {
 
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(MyApplicationConfig.class);
 
-		Animal a = ctx.getBean("animal1", Animal.class);
+//		Animal a = ctx.getBean("animal1", Animal.class);
 		
-		System.out.println(a);
+//		System.out.println(a);
 		
 		System.out.println("main method ended!!");
 	}

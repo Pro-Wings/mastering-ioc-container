@@ -1,9 +1,12 @@
 package com.prowings.springcore.zeroxml;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 @Component
+//@Repository
 public class Animal {
 
 //	@Value("124")
@@ -15,6 +18,7 @@ public class Animal {
 
 	public Animal() {
 		super();
+		System.out.println("Animal bean created!!");
 	}
 
 	public int getId() {
